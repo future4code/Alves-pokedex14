@@ -2,7 +2,7 @@ import styled from "styled-components";
 import BackgroundCard from '../../Assets/BackgroundCard.svg'
 
 export const Container = styled.div`
-width: 30.556vw;
+width: 90%;
 height: 17vw;
 background-color: #729F92;
 border-radius: 12px;
