@@ -1,9 +1,9 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Bruna Vitória Oliveira de Sousa
+- Douglas Henrique Ferreira Barbosa
+- Wesliane Silva Vieira
 
 Link do Surge: www.link.com.br
 
