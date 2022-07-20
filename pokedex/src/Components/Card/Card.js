@@ -3,8 +3,18 @@ import { MainContainer, PokemonImage, PokemonTypeGrass, PokemonTypePoison, Style
 import Poison from '../../Assets/Poison.svg'
 import Grass from '../../Assets/Grass.svg'
 import Bulbasaur from '../../Assets/Bulbasaur.svg'
+import { useNavigate } from 'react-router-dom'
 
 export default function Card2() {
+  const navigate =  useNavigate()
+
+  const goToDetailsPage = () => {
+    navigate("/details/:id")
+  }
+
+  const goToPokedexPage = () => {
+    navigate("/pokedex")
+  }
   return (
     <MainContainer>
       <StyledPokemonNumber>
@@ -25,13 +35,15 @@ export default function Card2() {
         Grass
       </PokemonTypeGrass>
 
-      <StyledDetails>
+      <StyledDetails onClick={goToDetailsPage}>
         Detalhes
       </StyledDetails>
 
       <PokemonImage src={Bulbasaur} />
       
-      <StyledButton>Capturar!</StyledButton>
+      <StyledButton onClick={goToPokedexPage}>
+        Capturar!
+      </StyledButton>
 
     </MainContainer>
   )

@@ -28,6 +28,7 @@ font-size: 24px;
 line-height: 36px;
 color: #FFFFFF;
 border: none;
+cursor: pointer; 
 `
 
 export const StyledImg = styled.img`
