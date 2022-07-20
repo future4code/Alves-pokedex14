@@ -1,66 +1,189 @@
 import styled from "styled-components";
 import BackgroundCard from '../../Assets/BackgroundCard.svg'
 
-export const Container = styled.div`
-width: 90%;
-height: 17vw;
-background-color: #729F92;
+export const MainContainer = styled.div`
+min-width: 394px;
+height: 165px;
+background: #729F92;
+
 border-radius: 12px;
+padding: 25px 23px 20px 23px;
 background-image: url(${BackgroundCard});
 background-repeat: no-repeat;
-background-position-x: 105px ;
-background-size: 30vw 17vw;
-margin-bottom: 56px;
-`
+background-position-x: 200px;
+background-position-y: -10px;
+background-size: 235.73px 245.73px;
+`   
 
-export const StyledNumber = styled.h4`
+export const StyledPokemonNumber = styled.h4`
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
 line-height: 19px;
 color: #FFFFFF;
-position: relative;
-left: 23px;
-top: 25px;
 `
-
-export const StyledName = styled.h3`
+export const StyledPokemonName = styled.h3`
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
 font-size: 32px;
 line-height: 39px;
 color: #FFFFFF;
-position: relative;
-left: 23px;
-top: 20px;
 `
 
-export const PokemonType = styled.span`
+export const PokemonTypePoison = styled.span`
 display: flex;
 flex-direction: row;
-align-items: flex-start;
+align-items: center;
 padding: 5px 8px;
 gap: 17px;
-width: 88px;
-height: 28px;
-position: relative;
-left: 23px;
-top: 30px;
+
+position: absolute;
+width: 83px;
+height: 21px;
+
+background: #AD61AE;
+border: 1px dashed rgba(255, 255, 255, 0.47);
+border-radius: 8px;
+
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 21px;
 color: #FFFFFF;
-background: #AD61AE;
-border: 1px dashed rgba(255, 255, 255, 0.47);
-border-radius: 8px;
-align-items: center;
+
+margin-top: 8px;
 `
 
-export const PokemonType2 = styled.span`
+export const PokemonTypeFire = styled.span`
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 8px;
+gap: 17px;
+
+position: absolute;
+width: 66px;
+height: 26px;
+
+background: #F44900;
+border: 1px dashed rgba(255, 255, 255, 0.47);
+border-radius: 8px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+
+margin-top: 8px;
+`
+
+export const PokemonTypeWater = styled.span`
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 8px;
+gap: 17px;
+
+position: absolute;
+width: 89px;
+height: 26px;
+
+background: #33A4F5;
+border: 1px dashed rgba(255, 255, 255, 0.47);
+border-radius: 8px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+
+margin-top: 8px;
+`
+
+export const PokemonTypeBug = styled.span`
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 8px;
+gap: 17px;
+
+position: absolute;
+width: 74px;
+height: 26px;
+
+background: #316520;
+border: 1px dashed rgba(255, 255, 255, 0.47);
+border-radius: 8px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+
+margin-top: 8px;
+`
+
+export const PokemonTypeNormal = styled.span`
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 8px;
+gap: 17px;
+
+position: absolute;
+width: 98px;
+height: 26px;
+
+background: #8A8A8A;
+border: 1px dashed rgba(255, 255, 255, 0.47);
+border-radius: 8px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+
+margin-top: 8px;
+`
+
+export const PokemonTypeGrass = styled.span`
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 5px 8px;
+gap: 17px;
+
+position: relative;
+left: 107px;
+width: 83px;
+height: 21px;
+
+background: #70B873;
+border: 1px dashed rgba(255, 255, 255, 0.47);
+border-radius: 8px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+
+margin-top: 8px;
+`
+
+export const PokemonTypeFlying = styled.span`
 display: flex;
 flex-direction: row;
 align-items: flex-start;
@@ -68,36 +191,45 @@ padding: 5px 8px;
 gap: 17px;
 
 position: relative;
-width: 88px;
-height: 28px;
-left: 129px;
-top: -10px;
+width: 87px;
+height: 26px;
+left: 107px;
 
-background: #70B873;
+background: #6892B0;
 border: 1px dashed rgba(255, 255, 255, 0.47);
 border-radius: 8px;
-align-items: center;
-margin-left: 7px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+color: #FFFFFF;
+
+margin-top: 8px;
 `
 
 export const StyledDetails = styled.h3`
+width: 74px;
+height: 24px;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 700;
-font-size: 18px;
+font-size: 16px;
 line-height: 24px;
+margin-top: 46px;
+
 text-decoration-line: underline;
+
 color: #FFFFFF;
-position: relative;
-bottom: 155px;
-left: 23px;
 `
 
-export const StyledPokemonImg = styled.img`
+export const PokemonImage = styled.img`
 position: relative;
-left: 14.5vw;
-bottom: 19vh;
-height: 30vh;
+width: 193px;
+height: 193px;
+bottom: 245px;
+left: 217px;
 `
 
 export const StyledButton = styled.button`
@@ -106,20 +238,22 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 4px 10px;
-width: 146px;
-height: 38px;
+
+position: relative;
+bottom: 225px;
+left: 250px;
+width: 136px;
+height: 34px;
+border: none;
+
 background: #FFFFFF;
 border-radius: 8px;
-position: relative;
-bottom: 190px;
-left: 390px;
+
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
-font-size: 18px;
+font-size: 16px;
 line-height: 24px;
-
-/* identical to box height */
-
 color: #0F0F0F;
 `
+
