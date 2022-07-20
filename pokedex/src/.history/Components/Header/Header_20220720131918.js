@@ -1,0 +1,16 @@
+import React from 'react'
+import { ContainerHeader, StyledButton, StyledImg } from './Styled'
+import Logo from '../../Assets/Logo.svg'
+import { goToPokedex } from '../../Routes/Coordinator'
+
+export default function Header() {
+  const navigate = useNavigate()
+
+  return (
+    <ContainerHeader>
+        <span></span>
+        <StyledImg src={Logo}></StyledImg>
+        <StyledButton onClick={()=>goToPokedex(navigate)}>Pokedex</StyledButton>
+    </ContainerHeader>
+  )
+}
