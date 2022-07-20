@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from '../../Components/Card/Card'
 import Header from '../../Components/Header/Header'
-import TypeCardHome from '../../Components/TypeCardHome/TypeCardHome'
 import { DisplayCards, StyledH2 } from './Styled'
 
 export default function Home() {

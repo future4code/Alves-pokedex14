@@ -5,7 +5,7 @@ background-color: white;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 align-items: center;
-height: 17vh;
+min-height: 12vh;
 width: 100vw;
 justify-content: center;
 `

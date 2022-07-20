@@ -1,38 +1,38 @@
 import React from 'react'
-import { Container, PokemonType, PokemonType2, StyledButton, StyledDetails, StyledName, StyledNumber, StyledPokemonImg } from './Styled'
+import { MainContainer, PokemonImage, PokemonTypeGrass, PokemonTypePoison, StyledButton, StyledDetails, StyledPokemonName, StyledPokemonNumber } from './Styled'
 import Poison from '../../Assets/Poison.svg'
 import Grass from '../../Assets/Grass.svg'
 import Bulbasaur from '../../Assets/Bulbasaur.svg'
 
-export default function Card() {
-    return (
-        <Container>
+export default function Card2() {
+  return (
+    <MainContainer>
+      <StyledPokemonNumber>
+        #01
+      </StyledPokemonNumber>
 
-            <StyledNumber>
-                #01
-            </StyledNumber>
+      <StyledPokemonName>
+      Bulbasaur
+      </StyledPokemonName>
 
-            <StyledName>
-                Bulbasaur
-            </StyledName>
+      <PokemonTypePoison>
+        <img src={Poison}></img>
+        Poison
+      </PokemonTypePoison>
 
-            <PokemonType>
-                <img src={Poison}></img>
-                Poison
-            </PokemonType>
+      <PokemonTypeGrass>
+        <img src={Grass} ></img>
+        Grass
+      </PokemonTypeGrass>
 
-            <PokemonType2>
-                <img src={Grass}></img>
-                Grass
-            </PokemonType2>
+      <StyledDetails>
+        Detalhes
+      </StyledDetails>
 
-            <StyledPokemonImg src={Bulbasaur}></StyledPokemonImg>
+      <PokemonImage src={Bulbasaur} />
+      
+      <StyledButton>Capturar!</StyledButton>
 
-            <StyledDetails>
-                Detalhes
-            </StyledDetails>
-
-            <StyledButton>Capturar!</StyledButton>
-        </Container>
-    )
+    </MainContainer>
+  )
 }
