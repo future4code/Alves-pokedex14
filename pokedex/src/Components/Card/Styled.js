@@ -5,6 +5,7 @@ export const MainContainer = styled.div`
 min-width: 394px;
 height: 165px;
 background: #729F92;
+
 border-radius: 12px;
 padding: 25px 23px 20px 23px;
 background-image: url(${BackgroundCard});
