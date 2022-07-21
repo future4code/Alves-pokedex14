@@ -7,5 +7,6 @@ background-color: #5E5E5E;
 font-family: 'Poppins', sans-serif;
 display: flex;
 height: 100vh;
+width: 100vw;
 }
 `

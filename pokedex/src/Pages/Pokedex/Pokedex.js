@@ -1,8 +1,11 @@
 import React from 'react'
-import HeaderPokedex from '../../Components/HeaderPokedex/HeaderPokedex'
-import { DisplayCards } from './Styled'
+import HeaderPokedex from '../../Components/Header/HeaderPokedex/HeaderPokedex'
+import { StyledH2 } from './Styled'
+
 
 export default function Pokedex() {
+  
+
   return (
     <div>
       <HeaderPokedex />
@@ -10,7 +13,6 @@ export default function Pokedex() {
 
       
       </DisplayCards>
-
     </div>
   )
 }
