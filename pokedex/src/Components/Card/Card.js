@@ -1,5 +1,5 @@
 import React from 'react'
-import { MainContainer, PokemonImage, PokemonTypeFire, PokemonTypeGrass, StyledButton, StyledDetails, StyledPokemonName, StyledPokemonNumber, PokemonType0, PokemonType1, InvisibleSpan } from './Styled'
+import { MainContainer, PokemonImage, StyledButton, StyledDetails, StyledPokemonName, StyledPokemonNumber, PokemonType0, PokemonType1, InvisibleSpan } from './Styled'
 import Poison from '../../Assets/Poison.svg'
 import Grass from '../../Assets/Grass.svg'
 import Fire from '../../Assets/Fire.svg'
@@ -21,11 +21,18 @@ import Steel from '../../Assets/Steel.svg'
 import { useContext, useEffect, useState } from 'react'
 import GlobalStateContext from '../../Global/GlobalStateContext'
 import axios from 'axios'
+import { goToDetailsPage } from '../../Routes/Coordinator'
+import { useNavigate, useParams } from 'react-router-dom'
 
 export default function Card(props) {
   const [pokemonDetail, setPokemonDetail] = useState({})
   const { states, constants } = useContext(GlobalStateContext)
   const [pokemonType, setPokemonType] = useState([])
+
+  //
+
+  const params = useParams();
+  const navigate = useNavigate();
 
   //
 
@@ -57,7 +64,7 @@ export default function Card(props) {
     type['tipo' + index] = element.type.name
   })
 
- // Type icons rendering logic
+  // Type icons rendering logic
 
   const changeType0MiniImage = () => {
     if (type.tipo0 === 'grass') {
@@ -96,7 +103,7 @@ export default function Card(props) {
       return Rock
     } else if (type.tipo0 === 'steel') {
       return Steel
-    } 
+    }
   }
 
   const changeType1MiniImage = () => {
@@ -138,10 +145,32 @@ export default function Card(props) {
       return Steel
     }
   }
-  
+
+  // add to pokedex
+
+  let listPokedexCache = JSON.parse(localStorage.getItem('pokedex cache'));
+
+  const getToPokedex = (nome, id, tipo0, tipo1, foto) => {
+    let listPokedexCache = JSON.parse(localStorage.getItem('pokedex cache'));
+    if (listPokedexCache !== null) {
+      const novoPokemon = { nome, id, tipo0, tipo1, foto }
+      const novaListaCapturados = [...states.pokedex, novoPokemon]
+      states.setPokedex(novaListaCapturados)
+      localStorage.setItem('pokedex cache', JSON.stringify(novaListaCapturados))
+      alert("Pokemon Capturado!")
+    }
+    else {
+      const novoPokemon = { nome, id, tipo0, tipo1, foto }
+      const novaListaCapturados = [...states.pokedex, novoPokemon]
+      states.setPokedex(novaListaCapturados)
+      localStorage.setItem('pokedex cache', JSON.stringify(novaListaCapturados))
+      alert("Pokemon Capturado!")
+    }
+  }
+
   //
 
-
+  console.log(states.pokedex)
   return (
     <MainContainer type={type}>
       <StyledPokemonNumber>
@@ -162,12 +191,12 @@ export default function Card(props) {
         {type.tipo1}
       </PokemonType1> : <InvisibleSpan></InvisibleSpan>}
 
-      <StyledDetails onClick={goToDetailsPage}>
+      <StyledDetails onClick={()=>goToDetailsPage(navigate, props.name)}>
         Detalhes
       </StyledDetails>
       <PokemonImage src={pokemonDetail.sprites && pokemonDetail[`sprites`][`other`][`official-artwork`][`front_default`]} />
 
-      <StyledButton>Capturar!</StyledButton>
+      <StyledButton onClick={() => getToPokedex(pokemonDetail.name, pokemonDetail.id, type.tipo0, type.tipo1, pokemonDetail[`sprites`][`other`][`official-artwork`][`front_default`])}>Capturar!</StyledButton>
 
     </MainContainer>
   )

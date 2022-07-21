@@ -9,6 +9,7 @@ export default function Router() {
         <BrowserRouter>
             <Routes>
                 <Route index element={<Home />}></Route>
+                <Route path=':number' element={<Home/>}></Route>
                 <Route path='pokedex' element={<Pokedex />}></Route>
                 <Route path='details/:id' element={<Details/>}></Route>
             </Routes>

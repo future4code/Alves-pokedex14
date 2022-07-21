@@ -20,6 +20,7 @@ font-style: normal;
 font-weight: 700;
 font-size: 24px;
 line-height: 36px;
+cursor: pointer;
 
 /* identical to box height */
 text-decoration-line: underline;
@@ -49,6 +50,7 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 24px;
+cursor: pointer;
 
 /* identical to box height */
 border: none;

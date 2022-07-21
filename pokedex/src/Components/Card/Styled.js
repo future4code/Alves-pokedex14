@@ -20,7 +20,7 @@ background: ${props => props.type.tipo0 === "ghost" && "#7084ca" };
 background: ${props => props.type.tipo0 === "ice" && "#48a497" };
 background: ${props => props.type.tipo0 === "dragon" && "#004170;" };
 background: ${props => props.type.tipo0 === "steel" && "#B7B9D0" };
-background: ${props => props.type.tipo0 === "dark" && "#75574C" };
+background: ${props => props.type.tipo0 === "dark" && "#55433c" };
 background: ${props => props.type.tipo0 === "flying" && "#A891EC" };
 
 border-radius: 12px;
@@ -79,7 +79,6 @@ background: ${props => props.type.tipo0 === "dark" && "#75574C" };
 background: ${props => props.type.tipo0 === "flying" && "#A891EC" };
 border: 1px dashed rgba(255, 255, 255, 0.47);
 border-radius: 8px;
-
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;

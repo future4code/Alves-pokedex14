@@ -30,3 +30,43 @@ gap: 40px;
     grid-template-columns: 1fr;
 }
 `
+
+export const StyledH3 = styled.h3`
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 72px;
+color: #FFFFFF;
+margin-top: 60px;
+margin-left: 40px;
+margin-bottom: 2px;
+text-align: center;
+`
+
+export const Pagination = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 2px;
+`
+
+export const PageNumber = styled.a`
+color: white;
+font-family: 'Poppins';
+float: left;
+padding: 8px 16px;
+font-size: 22px;
+text-decoration: none;
+transition: background-color .3s;
+border: 1px solid #ddd;
+border-radius: 5px;
+cursor: pointer;
+:active{
+    background-color: red;
+  color: white;
+}
+:hover:not(.active) {
+    background-color: #C12239;
+}
+`
