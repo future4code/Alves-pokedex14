@@ -80,14 +80,12 @@ export default function Details() {
               <Moves>
                 <DivMoves>
                   <DivMv>
-                    <StyledInfo>
                     {abilities && abilities.map((item, indice) => {
-                        return item.ability.name
+                        return item.ability.name + ', '
                     })}
-                    </StyledInfo>
                   </DivMv>
+                  <StyledP>Moves</StyledP>
                 </DivMoves>
-                <StyledP>Moves</StyledP>
               </Moves>
             </DivInfos>
             <DivBaseStats>Base Stats</DivBaseStats>

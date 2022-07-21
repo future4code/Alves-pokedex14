@@ -257,7 +257,6 @@ export const DivMoves = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 10px 0px;
 gap: 8px;
 justify-content: center;
 text-align: center;
@@ -271,6 +270,7 @@ padding: 10px 0px;
 gap: 8px;
 justify-content: center;
 text-align: center;
+font-size: 10px;
 `
 
 export const StyledInfo = styled.p`
@@ -280,8 +280,10 @@ font-weight: 400;
 font-size: 10px;
 line-height: 16px;
 display: flex;
+flex-direction: column;
 align-items: center;
-text-align: justify;
+text-align: center;
+flex-wrap: nowrap;
 `
 
 export const DivBaseStats = styled.div`
