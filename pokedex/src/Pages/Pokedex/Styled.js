@@ -15,5 +15,17 @@ export const DisplayCards = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 justify-items: center;
+align-items: center;
 margin-top: 54px;
+margin-left: 30px;
+margin-right: 30px;
+gap: 40px;
+
+@media (max-width: 1430px){
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 949px){
+    grid-template-columns: 1fr;
+}
 `

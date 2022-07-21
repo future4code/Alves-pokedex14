@@ -1,19 +1,23 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import GlobalStateContext from './GlobalStateContext'
 import axios from 'axios'
 
 const GlobalState = (props) => {
     const [pokemonsList, setPokemonsList] = useState([])
     const [pokemonDetail, setPokemonDetail] = useState({})
+    const [pokedex, setPokedex] = useState([])
+    const [pokemonPage, setPokemonPage] = useState([])
+    const [pokemonTypes, setPokemonTypes] = useState([])
 
     // pegar lista
 
-    const getPokemons = () => {
+    const getPokemons = (pageValue) => {
         axios
-        .get('https://pokeapi.co/api/v2/pokemon?limit=30&offset=0')
+        .get(`https://pokeapi.co/api/v2/pokemon?limit=30&offset=${pageValue}`)
         .then((res) => setPokemonsList(res.data.results))
         .catch((err) => alert(err.response))
     }
+
 
     // pegar info cards
 
@@ -29,18 +33,39 @@ const GlobalState = (props) => {
           })
       }
 
-    // 
+    // get detailsPage
 
+    const getDetailsPage = (name) => {
+      axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+      .then((res) => {
+        setPokemonPage(res.data)
+       setPokemonTypes(res.data.types)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+    }
+    
+    // 
       const states = {
         pokemonsList,
         setPokemonsList,
         pokemonDetail,
-        setPokemonDetail
+        setPokemonDetail,
+        pokedex,
+        setPokedex,
+        pokemonPage,
+        setPokemonPage,
+        pokemonTypes,
+        setPokemonTypes
       }
 
       const constants = {
         getPokemons,
-        getDetails
+        getDetails,
+        getDetailsPage
+        
       }
 
 
