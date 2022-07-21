@@ -11,3 +11,9 @@ margin-top: 60px;
 margin-left: 40px;
 margin-bottom: 2px;
 `
+export const DisplayCards = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+justify-items: center;
+margin-top: 54px;
+`

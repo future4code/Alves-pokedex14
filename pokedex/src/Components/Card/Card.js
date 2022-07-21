@@ -141,6 +141,7 @@ export default function Card(props) {
   
   //
 
+
   return (
     <MainContainer type={type}>
       <StyledPokemonNumber>
@@ -161,10 +162,9 @@ export default function Card(props) {
         {type.tipo1}
       </PokemonType1> : <InvisibleSpan></InvisibleSpan>}
 
-      <StyledDetails>
+      <StyledDetails onClick={goToDetailsPage}>
         Detalhes
       </StyledDetails>
-
       <PokemonImage src={pokemonDetail.sprites && pokemonDetail[`sprites`][`other`][`official-artwork`][`front_default`]} />
 
       <StyledButton>Capturar!</StyledButton>

@@ -22,6 +22,7 @@ background: ${props => props.type.tipo0 === "dragon" && "#004170;" };
 background: ${props => props.type.tipo0 === "steel" && "#B7B9D0" };
 background: ${props => props.type.tipo0 === "dark" && "#75574C" };
 background: ${props => props.type.tipo0 === "flying" && "#A891EC" };
+
 border-radius: 12px;
 padding: 25px 23px 20px 23px;
 background-image: url(${BackgroundCard});
@@ -167,6 +168,7 @@ margin-top: 46px;
 text-decoration-line: underline;
 
 color: #FFFFFF;
+cursor: pointer;
 `
 
 export const PokemonImage = styled.img`
@@ -200,5 +202,6 @@ font-weight: 400;
 font-size: 16px;
 line-height: 24px;
 color: #0F0F0F;
+cursor: pointer;
 `
 
