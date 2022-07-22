@@ -32,7 +32,24 @@ padding-top: 24px;
 padding-left: 24px;
 padding-right: 24px;
 border-radius: 12px;
-background: #74CB48;
+background: ${props => props.type.tipo0 === "grass" && "#729F92;" };
+background: ${props => props.type.tipo0 === "fire" && "#EAAB7D;" };
+background: ${props => props.type.tipo0 === "water" && "#71C3FF;" };
+background: ${props => props.type.tipo0 === "bug" && "#76A866" };
+background: ${props => props.type.tipo0 === "normal" && "#BF9762;" };
+background: ${props => props.type.tipo0 === "poison" && "#d1a3d0" };
+background: ${props => props.type.tipo0 === "electric" && "#ffc95e" };
+background: ${props => props.type.tipo0 === "ground" && "#b6866f" };
+background: ${props => props.type.tipo0 === "fairy" && "#bd7886" };
+background: ${props => props.type.tipo0 === "fighting" && "#B0385A" };
+background: ${props => props.type.tipo0 === "psychic" && "#e05e65" };
+background: ${props => props.type.tipo0 === "rock" && "#9e8f65" };
+background: ${props => props.type.tipo0 === "ghost" && "#7084ca" };
+background: ${props => props.type.tipo0 === "ice" && "#48a497" };
+background: ${props => props.type.tipo0 === "dragon" && "#004170;" };
+background: ${props => props.type.tipo0 === "steel" && "#B7B9D0" };
+background: ${props => props.type.tipo0 === "dark" && "#55433c" };
+background: ${props => props.type.tipo0 === "flying" && "#A891EC" };
 background-image: url(${Pokeball});
 background-repeat: no-repeat;
 background-position-x: 143px;
@@ -77,7 +94,7 @@ export const StyledPokemonImage = styled.img`
 width: 220px;
 height: 220px;
 position: relative;
-left: 60px;
+left: 75px;
 top: 50px;
 z-index: 2;
 `
@@ -119,7 +136,24 @@ padding: 2px 8px;
 width: 46px;
 height: 20px;
 
-background: #74CB48;
+background: ${props => props.type.tipo0 === "grass" && "#729F92;" };
+background: ${props => props.type.tipo0 === "fire" && "#EAAB7D;" };
+background: ${props => props.type.tipo0 === "water" && "#71C3FF;" };
+background: ${props => props.type.tipo0 === "bug" && "#76A866" };
+background: ${props => props.type.tipo0 === "normal" && "#BF9762;" };
+background: ${props => props.type.tipo0 === "poison" && "#d1a3d0" };
+background: ${props => props.type.tipo0 === "electric" && "#ffc95e" };
+background: ${props => props.type.tipo0 === "ground" && "#b6866f" };
+background: ${props => props.type.tipo0 === "fairy" && "#bd7886" };
+background: ${props => props.type.tipo0 === "fighting" && "#B0385A" };
+background: ${props => props.type.tipo0 === "psychic" && "#e05e65" };
+background: ${props => props.type.tipo0 === "rock" && "#9e8f65" };
+background: ${props => props.type.tipo0 === "ghost" && "#7084ca" };
+background: ${props => props.type.tipo0 === "ice" && "#48a497" };
+background: ${props => props.type.tipo0 === "dragon" && "#004170;" };
+background: ${props => props.type.tipo0 === "steel" && "#B7B9D0" };
+background: ${props => props.type.tipo0 === "dark" && "#55433c" };
+background: ${props => props.type.tipo0 === "flying" && "#A891EC" };
 border-radius: 10px;
 
 font-family: 'Poppins';
@@ -141,7 +175,24 @@ padding: 2px 8px;
 width: 46px;
 height: 20px;
 
-background: #74CB48;
+background: ${props => props.type.tipo0 === "grass" && "#729F92;" };
+background: ${props => props.type.tipo0 === "fire" && "#EAAB7D;" };
+background: ${props => props.type.tipo0 === "water" && "#71C3FF;" };
+background: ${props => props.type.tipo0 === "bug" && "#76A866" };
+background: ${props => props.type.tipo0 === "normal" && "#BF9762;" };
+background: ${props => props.type.tipo0 === "poison" && "#d1a3d0" };
+background: ${props => props.type.tipo0 === "electric" && "#ffc95e" };
+background: ${props => props.type.tipo0 === "ground" && "#b6866f" };
+background: ${props => props.type.tipo0 === "fairy" && "#bd7886" };
+background: ${props => props.type.tipo0 === "fighting" && "#B0385A" };
+background: ${props => props.type.tipo0 === "psychic" && "#e05e65" };
+background: ${props => props.type.tipo0 === "rock" && "#9e8f65" };
+background: ${props => props.type.tipo0 === "ghost" && "#7084ca" };
+background: ${props => props.type.tipo0 === "ice" && "#48a497" };
+background: ${props => props.type.tipo0 === "dragon" && "#004170;" };
+background: ${props => props.type.tipo0 === "steel" && "#B7B9D0" };
+background: ${props => props.type.tipo0 === "dark" && "#55433c" };
+background: ${props => props.type.tipo0 === "flying" && "#A891EC" };
 border-radius: 10px;
 
 font-family: 'Poppins';
@@ -172,7 +223,24 @@ font-style: normal;
 font-weight: 700;
 font-size: 18px;
 line-height: 16px;
-color: #74CB48;
+color: ${props => props.type.tipo0 === "grass" && "#729F92;" };
+color: ${props => props.type.tipo0 === "fire" && "#EAAB7D;" };
+color: ${props => props.type.tipo0 === "water" && "#71C3FF;" };
+color: ${props => props.type.tipo0 === "bug" && "#76A866" };
+color: ${props => props.type.tipo0 === "normal" && "#BF9762;" };
+color: ${props => props.type.tipo0 === "poison" && "#d1a3d0" };
+color: ${props => props.type.tipo0 === "electric" && "#ffc95e" };
+color: ${props => props.type.tipo0 === "ground" && "#b6866f" };
+color: ${props => props.type.tipo0 === "fairy" && "#bd7886" };
+color: ${props => props.type.tipo0 === "fighting" && "#B0385A" };
+color: ${props => props.type.tipo0 === "psychic" && "#e05e65" };
+color: ${props => props.type.tipo0 === "rock" && "#9e8f65" };
+color: ${props => props.type.tipo0 === "ghost" && "#7084ca" };
+color: ${props => props.type.tipo0 === "ice" && "#48a497" };
+color: ${props => props.type.tipo0 === "dragon" && "#004170;" };
+color: ${props => props.type.tipo0 === "steel" && "#B7B9D0" };
+color: ${props => props.type.tipo0 === "dark" && "#55433c" };
+color: ${props => props.type.tipo0 === "flying" && "#A891EC" };
 `
 
 export const DivInfos = styled.div`
@@ -202,6 +270,7 @@ font-style: normal;
 font-weight: 400;
 font-size: 8px;
 line-height: 12px;
+margin: 0 auto;
 
 /* identical to box height, or 150% */
 display: flex;
@@ -225,7 +294,7 @@ border-right: 1px solid #E0E0E0;
 
 export const Moves = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: column;
 align-items: flex-start;
 padding: 10px 0px;
 gap: 8px;
@@ -255,9 +324,8 @@ text-align: center;
 
 export const DivMoves = styled.div`
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: center;
-padding: 10px 0px;
 gap: 8px;
 justify-content: center;
 text-align: center;
@@ -265,12 +333,13 @@ text-align: center;
 
 export const DivMv = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: column;
 align-items: center;
 padding: 10px 0px;
 gap: 8px;
 justify-content: center;
 text-align: center;
+font-size: 10px;
 `
 
 export const StyledInfo = styled.p`
@@ -280,8 +349,11 @@ font-weight: 400;
 font-size: 10px;
 line-height: 16px;
 display: flex;
+flex-direction: column;
 align-items: center;
-text-align: justify;
+text-align: center;
+flex-wrap: nowrap;
+margin: 0 auto;
 `
 
 export const DivBaseStats = styled.div`
@@ -296,13 +368,30 @@ font-style: normal;
 font-weight: 700;
 font-size: 18px;
 line-height: 16px;
-color: #74CB48;
+color: ${props => props.type.tipo0 === "grass" && "#729F92;" };
+color: ${props => props.type.tipo0 === "fire" && "#EAAB7D;" };
+color: ${props => props.type.tipo0 === "water" && "#71C3FF;" };
+color: ${props => props.type.tipo0 === "bug" && "#76A866" };
+color: ${props => props.type.tipo0 === "normal" && "#BF9762;" };
+color: ${props => props.type.tipo0 === "poison" && "#d1a3d0" };
+color: ${props => props.type.tipo0 === "electric" && "#ffc95e" };
+color: ${props => props.type.tipo0 === "ground" && "#b6866f" };
+color: ${props => props.type.tipo0 === "fairy" && "#bd7886" };
+color: ${props => props.type.tipo0 === "fighting" && "#B0385A" };
+color: ${props => props.type.tipo0 === "psychic" && "#e05e65" };
+color: ${props => props.type.tipo0 === "rock" && "#9e8f65" };
+color: ${props => props.type.tipo0 === "ghost" && "#7084ca" };
+color: ${props => props.type.tipo0 === "ice" && "#48a497" };
+color: ${props => props.type.tipo0 === "dragon" && "#004170;" };
+color: ${props => props.type.tipo0 === "steel" && "#B7B9D0" };
+color: ${props => props.type.tipo0 === "dark" && "#55433c" };
+color: ${props => props.type.tipo0 === "flying" && "#A891EC" };
 margin-top: 30px;
 `
 
 export const Stats = styled.div`
 display: grid;
-grid-template-columns: 1fr 1fr 3fr;
+grid-template-columns: 1fr 1fr;
 padding: 0px;
 width: 312px;
 height: 100px;
@@ -325,16 +414,34 @@ display: flex;
 flex-direction: column;
 align-items: center;
 text-align: right;
+margin-left: 130px;
 
 /* Type - Grass */
-color: #74CB48;
+color: ${props => props.type.tipo0 === "grass" && "#729F92;" };
+color: ${props => props.type.tipo0 === "fire" && "#EAAB7D;" };
+color: ${props => props.type.tipo0 === "water" && "#71C3FF;" };
+color: ${props => props.type.tipo0 === "bug" && "#76A866" };
+color: ${props => props.type.tipo0 === "normal" && "#BF9762;" };
+color: ${props => props.type.tipo0 === "poison" && "#d1a3d0" };
+color: ${props => props.type.tipo0 === "electric" && "#ffc95e" };
+color: ${props => props.type.tipo0 === "ground" && "#b6866f" };
+color: ${props => props.type.tipo0 === "fairy" && "#bd7886" };
+color: ${props => props.type.tipo0 === "fighting" && "#B0385A" };
+color: ${props => props.type.tipo0 === "psychic" && "#e05e65" };
+color: ${props => props.type.tipo0 === "rock" && "#9e8f65" };
+color: ${props => props.type.tipo0 === "ghost" && "#7084ca" };
+color: ${props => props.type.tipo0 === "ice" && "#48a497" };
+color: ${props => props.type.tipo0 === "dragon" && "#004170;" };
+color: ${props => props.type.tipo0 === "steel" && "#B7B9D0" };
+color: ${props => props.type.tipo0 === "dark" && "#55433c" };
+color: ${props => props.type.tipo0 === "flying" && "#A891EC" };
 `
 
-export const StatsNumber = styled.p`
+export const StatsNumber = styled.div`
 font-family: 'Poppins';
 font-style: normal;
-font-weight: 400;
-font-size: 12px;
+font-weight: 500;
+font-size: 13px;
 line-height: 16px;
 
 /* identical to box height, or 160% */
@@ -344,4 +451,5 @@ align-items: center;
 
 /* Dark Gray */
 color: #212121;
+margin-right: 40px;
 `

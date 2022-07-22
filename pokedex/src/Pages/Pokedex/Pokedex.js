@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react'
-import Card from '../../Components/Card/Card'
 import HeaderPokedex from '../../Components/Header/HeaderPokedex/HeaderPokedex'
 import { DisplayCards, StyledH2 } from './Styled'
 import GlobalStateContext from '../../Global/GlobalStateContext'
@@ -12,12 +11,12 @@ export default function Pokedex() {
 
   const pokedexList= {}
 
-  states.pokedex.forEach((element, index) => {
+  states.pokedex && states.pokedex.forEach((element, index) => {
     pokedexList['tipo' + index] = element
   })
 
   const renderPokedex = () => {
-    states.pokedex.map((pokemon) => {
+    states.pokedex && states.pokedex.map((pokemon) => {
       return <CardPokedex name={pokemon.nome}
       id={pokemon.id}
       tipo0={pokemon.tipo0}
@@ -33,6 +32,10 @@ export default function Pokedex() {
 
   let cachePokedex = JSON.parse(localStorage.getItem('pokedex cache'));
   const deletePokemon = (id) => {
+    const confirmBox = window.confirm(
+      `You really want to remove this pokemon from your pokedex?`
+  )
+  if (confirmBox === true) {
     const novaLista = cachePokedex.filter((pokemon) => {
       return pokemon.id !== id
     })
@@ -40,6 +43,9 @@ export default function Pokedex() {
     localStorage.setItem('pokedex cache', JSON.stringify(novaLista))
     cachePokedex = novaLista;
   }
+  }
+
+  console.log(states.pokedex)
   
   return (
     <div>

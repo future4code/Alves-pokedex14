@@ -40,6 +40,7 @@ export default function HeaderPokedex(props) {
     <ContainerHeader>
       <StyledGoBack onClick={() => goBack(navigate)}>⋘ Todos Pokémons</StyledGoBack>
       <StyledImg src={Logo}></StyledImg>
+      {/* <StyledButton onClick={()=>deletePokemon(props.id)}>Excluir da Pokedex</StyledButton> */}
       {renderButton()}
     </ContainerHeader>
   )

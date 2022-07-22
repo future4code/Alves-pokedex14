@@ -6,15 +6,12 @@ import { useContext } from 'react'
 import GlobalStateContext from '../../Global/GlobalStateContext'
 import { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { goToHomeNext, goToNextPage } from '../../Routes/Coordinator'
+import { goToHomeNext } from '../../Routes/Coordinator'
 
 export default function Home() {
   const { states, constants } = useContext(GlobalStateContext)
   const params = useParams();
   const navigate = useNavigate();
-
-  console.log(states.pokemonsList)
-
 
   useEffect(() => {
     constants.getPokemons(params.number)

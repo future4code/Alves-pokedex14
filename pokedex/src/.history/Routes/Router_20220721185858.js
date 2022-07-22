@@ -12,7 +12,6 @@ export default function Router() {
                 <Route path=':number' element={<Home/>}></Route>
                 <Route path='pokedex' element={<Pokedex />}></Route>
                 <Route path='details/:id' element={<Details/>}></Route>
-                <Route path='/pokedex/details/:id' element={<Details/>}></Route>
             </Routes>
         </BrowserRouter>
     )

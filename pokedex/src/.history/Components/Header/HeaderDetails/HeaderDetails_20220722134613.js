@@ -14,12 +14,18 @@ export default function HeaderPokedex(props) {
     return pokemon.nome 
   })
 
-  const renderButton = () => {
-    if (window.location.pathname.includes("/pokedex/detail")) {
-      return <StyledButton onClick={()=>deletePokemon(props.id)}>Excluir da Pokedex</StyledButton>
+  console.log(pokedexMap)
+
+  console.log(window.location.pathname)
+  
+
+  const renderingButton = () => {
+    if (pokedexMap === props.name) {
+      return <StyledButton>Excluir da Pokedex</StyledButton>
+    } else {
+      return <span></span>
     }
   }
-  
 
   const deletePokemon = (id) => {
     const confirmBox = window.confirm(
@@ -40,7 +46,8 @@ export default function HeaderPokedex(props) {
     <ContainerHeader>
       <StyledGoBack onClick={() => goBack(navigate)}>⋘ Todos Pokémons</StyledGoBack>
       <StyledImg src={Logo}></StyledImg>
-      {renderButton()}
+      {/* <StyledButton onClick={()=>deletePokemon(props.id)}>Excluir da Pokedex</StyledButton> */}
+      {renderingButton}
     </ContainerHeader>
   )
 }

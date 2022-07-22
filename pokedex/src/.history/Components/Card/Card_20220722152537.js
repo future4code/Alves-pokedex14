@@ -192,7 +192,7 @@ export default function Card(props) {
       <StyledDetails onClick={()=>goToDetailsPage(navigate, props.name)}>
         Detalhes
       </StyledDetails>
-      <PokemonImage alt='pokemon official artwork' src={pokemonDetail.sprites && pokemonDetail[`sprites`][`other`][`official-artwork`][`front_default`]} />
+      <PokemonImage alt='pokemon official artwork' src={pokemonDetail.sprites ? pokemonDetail[`sprites`][`other`][`official-artwork`][`front_default`] : <span></span>} />
 
       <StyledButton onClick={() => getToPokedex(pokemonDetail.name, pokemonDetail.id, type.tipo0, type.tipo1, pokemonDetail[`sprites`][`other`][`official-artwork`][`front_default`])}>Capturar!</StyledButton>
 
