@@ -20,7 +20,7 @@ import Rock from '../../Assets/Rock.svg'
 import Steel from '../../Assets/Steel.svg'
 import { useContext, useState } from 'react'
 import GlobalStateContext from '../../Global/GlobalStateContext'
-import { goToDetailsPage, goToDetailsPokedexPage } from '../../Routes/Coordinator'
+import { goToDetailsPage } from '../../Routes/Coordinator'
 import { useNavigate, useParams } from 'react-router-dom'
 
 export default function CardPokedex(props) {
@@ -144,7 +144,7 @@ export default function CardPokedex(props) {
                 {props.tipo1}
             </PokemonType1> : <InvisibleSpan></InvisibleSpan>}
 
-            <StyledDetails onClick={() => goToDetailsPokedexPage(navigate, props.name)}>
+            <StyledDetails onClick={() => goToDetailsPage(navigate, props.name)}>
                 Detalhes
             </StyledDetails>
             <PokemonImage alt='pokemon official artwork' src={props.photo && props.photo} />
