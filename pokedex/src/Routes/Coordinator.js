@@ -10,6 +10,17 @@ export const goToHomeNext = (navigate, number) => {
   navigate(`/${number}`)
   if (+number < 0) {
     navigate(`/${0}`)
+  } else if (window.location.pathname === "/NaN") {
+    navigate(`/30`)
+  }
+}
+
+export const goToHomeBack = (navigate, number) => {
+  navigate(`/${number}`)
+  if (+number < 0) {
+    navigate(`/${0}`)
+  } else if (window.location.pathname === "/NaN") {
+    navigate(`/0`)
   }
 }
 

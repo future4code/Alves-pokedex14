@@ -10,6 +10,9 @@ color: #FFFFFF;
 margin-top: 60px;
 margin-left: 40px;
 margin-bottom: 2px;
+@media (max-width: 970px){
+    text-align: center;
+}
 `
 
 export const DisplayCards = styled.div`
@@ -28,6 +31,11 @@ gap: 40px;
 
 @media (max-width: 949px){
     grid-template-columns: 1fr;
+}
+
+@media (max-width: 574px){
+    display: flex;
+    flex-direction: column;
 }
 `
 
