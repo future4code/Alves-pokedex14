@@ -2,7 +2,7 @@ import styled from "styled-components";
 import BackgroundCard from '../../Assets/BackgroundCard.svg'
 
 export const MainContainer = styled.div`
-min-width: 394px;
+min-width: 24.625rem;
 height: 165px;
 background: ${props => props.type.tipo0 === "grass" && "#729F92;" };
 background: ${props => props.type.tipo0 === "fire" && "#EAAB7D;" };
@@ -22,7 +22,7 @@ background: ${props => props.type.tipo0 === "dragon" && "#004170;" };
 background: ${props => props.type.tipo0 === "steel" && "#B7B9D0" };
 background: ${props => props.type.tipo0 === "dark" && "#55433c" };
 background: ${props => props.type.tipo0 === "flying" && "#A891EC" };
-
+box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 border-radius: 12px;
 padding: 25px 23px 20px 23px;
 background-image: url(${BackgroundCard});

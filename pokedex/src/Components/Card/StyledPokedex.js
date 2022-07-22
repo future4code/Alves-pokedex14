@@ -2,7 +2,7 @@ import styled from "styled-components";
 import BackgroundCard from '../../Assets/BackgroundCard.svg'
 
 export const MainContainer = styled.div`
-min-width: 394px;
+min-width: 24.625rem;
 height: 165px;
 background: ${props => props.tipo0 === "grass" && "#729F92;" };
 background: ${props => props.tipo0 === "fire" && "#EAAB7D;" };

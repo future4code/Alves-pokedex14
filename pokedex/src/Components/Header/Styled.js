@@ -8,6 +8,9 @@ align-items: center;
 min-height: 12vh;
 width: 100vw;
 justify-content: center;
+@media (max-width: 880px){
+    display: flex;
+}
 `
 
 export const StyledButton = styled.button`
@@ -34,4 +37,7 @@ cursor: pointer;
 export const StyledImg = styled.img`
 margin: 0 auto;
 
+@media (max-width: 517px){
+    height: 11vh;
+}
 `

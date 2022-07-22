@@ -6,7 +6,7 @@ import { useContext } from 'react'
 import GlobalStateContext from '../../Global/GlobalStateContext'
 import { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { goToHomeNext } from '../../Routes/Coordinator'
+import { goToHomeBack, goToHomeNext } from '../../Routes/Coordinator'
 
 export default function Home() {
   const { states, constants } = useContext(GlobalStateContext)
@@ -33,7 +33,7 @@ export default function Home() {
       </DisplayCards>
       <StyledH3>Pages</StyledH3>
       <Pagination>
-        <PageNumber onClick={()=>goToHomeNext(navigate, +params.number - +30)}>&laquo;</PageNumber>
+        <PageNumber onClick={()=>goToHomeBack(navigate, +params.number - +30)}>&laquo;</PageNumber>
         <PageNumber onClick={()=>goToHomeNext(navigate, 0)}>1</PageNumber>
         <PageNumber onClick={()=>goToHomeNext(navigate, 30)}>2</PageNumber>
         <PageNumber onClick={()=>goToHomeNext(navigate, 60)}>3</PageNumber>
