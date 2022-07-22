@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <ContainerHeader>
         <span></span>
-        <StyledImg src={Logo}></StyledImg>
+        <StyledImg alt='pokemon logo' src={Logo}></StyledImg>
         <StyledButton onClick={()=>goToPokedex(navigate)}>Pokedex</StyledButton>
     </ContainerHeader>
   )

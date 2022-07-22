@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import HeaderDetails from '../../Components/Header/HeaderDetails/HeaderDetails'
 import GlobalStateContext from '../../Global/GlobalStateContext';
-import { AboutDiv, ContainerCardDetails, DisplayCards, DivDetails, DivInfos, DivKg, DivTypes, Height, Moves, StyledH2, StyledH3, StyledH4, StyledId, StyledP, StyledPokemonImage, StyledTop, Type0, Type1, Weight, DivHg, StyledInfo, DivMoves, DivMv, DivBaseStats, Stats, StatsFont, StatsNumber } from './Styled';
+import { AboutDiv, ContainerCardDetails, DisplayCards, DivDetails, DivInfos, DivKg, DivTypes, Height, Moves, StyledH2, StyledH3, StyledH4, StyledId, StyledP, StyledPokemonImage, StyledTop, Type0, Type1, Weight, DivHg, DivMoves, DivMv, DivBaseStats, Stats, StatsFont, StatsNumber } from './Styled';
 import WeightSVG from '../../Assets/Weight.svg'
 import Ruler from '../../Assets/Ruler.svg'
 
@@ -11,8 +11,7 @@ export default function Details() {
   const params = useParams();
   const navigate = useNavigate();
   const abilities = states.pokemonPage.abilities
-  
-  console.log(abilities)
+  const stats = states.pokemonPage.stats
 
   useEffect(() => {
     constants.getDetailsPage(params.id)
@@ -24,16 +23,13 @@ export default function Details() {
     type['tipo' + index] = element.type.name
   })
 
-  // console.log(type)
-  console.log(states.pokemonPage)
-
   return (
     <div>
-      <HeaderDetails />
+      <HeaderDetails name={states.pokemonPage.name} id={states.pokemonPage.id}/>
       <StyledH2>Details</StyledH2>
       <DisplayCards>
 
-        <ContainerCardDetails>
+        <ContainerCardDetails type={type}>
 
           <StyledTop>
             <StyledH3>
@@ -44,18 +40,18 @@ export default function Details() {
             </StyledId>
           </StyledTop>
 
-          <StyledPokemonImage src={states.pokemonPage.sprites && states.pokemonPage[`sprites`][`other`][`official-artwork`][`front_default`]} ></StyledPokemonImage>
+          <StyledPokemonImage alt='pokemon artwork' src={states.pokemonPage.sprites && states.pokemonPage[`sprites`][`other`][`official-artwork`][`front_default`]} ></StyledPokemonImage>
 
           <DivDetails>
             <DivTypes>
-              <Type0>
+              <Type0 type={type}>
                 {type.tipo0}
               </Type0>
-              
-              {type.tipo1 ? <Type1>{type.tipo1}</Type1> : <span></span>}
+
+              {type.tipo1 ? <Type1 type={type}>{type.tipo1}</Type1> : <span></span>}
             </DivTypes>
             <AboutDiv>
-              <StyledH4>
+              <StyledH4 type={type}>
                 About
               </StyledH4>
             </AboutDiv>
@@ -63,7 +59,7 @@ export default function Details() {
             <DivInfos>
               <Weight>
                 <DivKg>
-                  <img src={WeightSVG}></img>
+                  <img alt='weight balance' src={WeightSVG}></img>
                   {states.pokemonPage.weight} kg
                 </DivKg>
                 <StyledP>Weight</StyledP>
@@ -71,7 +67,7 @@ export default function Details() {
 
               <Height>
                 <DivHg>
-                  <img src={Ruler}></img>
+                  <img alt='ruler' src={Ruler}></img>
                   {states.pokemonPage.height} cm
                 </DivHg>
                 <StyledP>Height</StyledP>
@@ -80,19 +76,17 @@ export default function Details() {
               <Moves>
                 <DivMoves>
                   <DivMv>
-                    <StyledInfo>
                     {abilities && abilities.map((item, indice) => {
-                        return item.ability.name
+                      return item.ability.name + ', '
                     })}
-                    </StyledInfo>
                   </DivMv>
                 </DivMoves>
                 <StyledP>Moves</StyledP>
               </Moves>
             </DivInfos>
-            <DivBaseStats>Base Stats</DivBaseStats>
+            <DivBaseStats type={type}>Base Stats</DivBaseStats>
             <Stats>
-              <StatsFont>
+              <StatsFont type={type}>
                 HP
                 <br />
                 ATK
@@ -105,19 +99,12 @@ export default function Details() {
                 <br />
                 SPD
               </StatsFont>
-              00
-              <br />
-              00
-              <br />
-              00
-              <br />
-              00
-              <br />
-              00
-              <br />
-              00
+              
+            
               <StatsNumber>
-
+              {stats && stats.map((item,indice) => {
+                return <StatsNumber> {item.base_stat} </StatsNumber> 
+              })}     
               </StatsNumber>
 
               <div>

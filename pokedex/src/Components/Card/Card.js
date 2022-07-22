@@ -63,7 +63,6 @@ export default function Card(props) {
   pokemonType.forEach((element, index) => {
     type['tipo' + index] = element.type.name
   })
-
   // Type icons rendering logic
 
   const changeType0MiniImage = () => {
@@ -170,7 +169,6 @@ export default function Card(props) {
 
   //
 
-  console.log(states.pokedex)
   return (
     <MainContainer type={type}>
       <StyledPokemonNumber>
@@ -182,19 +180,19 @@ export default function Card(props) {
       </StyledPokemonName>
 
       <PokemonType0 type={type} >
-        <img src={changeType0MiniImage()}></img>
+        <img alt='pokemon type symbol' src={changeType0MiniImage()}></img>
         {type.tipo0}
       </PokemonType0>
 
       {type.tipo1 ? <PokemonType1 type={type}>
-        <img src={changeType1MiniImage()} ></img>
+        <img alt='pokemon type symbol' src={changeType1MiniImage()} ></img>
         {type.tipo1}
       </PokemonType1> : <InvisibleSpan></InvisibleSpan>}
 
       <StyledDetails onClick={()=>goToDetailsPage(navigate, props.name)}>
         Detalhes
       </StyledDetails>
-      <PokemonImage src={pokemonDetail.sprites && pokemonDetail[`sprites`][`other`][`official-artwork`][`front_default`]} />
+      <PokemonImage alt='pokemon official artwork' src={pokemonDetail.sprites && pokemonDetail[`sprites`][`other`][`official-artwork`][`front_default`]} />
 
       <StyledButton onClick={() => getToPokedex(pokemonDetail.name, pokemonDetail.id, type.tipo0, type.tipo1, pokemonDetail[`sprites`][`other`][`official-artwork`][`front_default`])}>Capturar!</StyledButton>
 

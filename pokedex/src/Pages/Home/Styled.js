@@ -49,6 +49,7 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 gap: 2px;
+margin-bottom: 3vh;
 `
 
 export const PageNumber = styled.a`
@@ -67,6 +68,6 @@ cursor: pointer;
   color: white;
 }
 :hover:not(.active) {
-    background-color: #C12239;
+    background-color: #ffc400;
 }
 `

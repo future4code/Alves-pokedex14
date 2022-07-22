@@ -26,7 +26,6 @@ import { useNavigate, useParams } from 'react-router-dom'
 export default function CardPokedex(props) {
     const [pokemonDetail, setPokemonDetail] = useState({})
     const { states, constants } = useContext(GlobalStateContext)
-    const [pokemonprops, setPokemonprops] = useState([])
 
     //
 
@@ -118,12 +117,12 @@ export default function CardPokedex(props) {
 
     // add to pokedex
 
-    const getToPokedex = (nome, id, tipo0, tipo1, foto) => {
-        const novoPokemon = { nome, id, tipo0, tipo1, foto }
-        const newPokedexList = [...states.pokedex, novoPokemon]
-        states.setPokedex(newPokedexList)
-        console.log(`list`, states.pokedex)
-    }
+    // const getToPokedex = (nome, id, tipo0, tipo1, foto) => {
+    //     const novoPokemon = { nome, id, tipo0, tipo1, foto }
+    //     const newPokedexList = [...states.pokedex, novoPokemon]
+    //     states.setPokedex(newPokedexList)
+    //     console.log(`list`, states.pokedex)
+    // }
 
     return (
         <MainContainer tipo0={props.tipo0}>
@@ -136,19 +135,19 @@ export default function CardPokedex(props) {
             </StyledPokemonName>
 
             <PokemonType0 tipo0={props.tipo0}>
-                <img src={changeprops0MiniImage()}></img>
+                <img alt='pokemon type symbol' src={changeprops0MiniImage()}></img>
                 {props.tipo0}
             </PokemonType0 >
 
             {props.tipo1 ? <PokemonType1 tipo1={props.tipo1} >
-                <img src={changeprops1MiniImage()} ></img>
+                <img alt='pokemon type symbol' src={changeprops1MiniImage()} ></img>
                 {props.tipo1}
             </PokemonType1> : <InvisibleSpan></InvisibleSpan>}
 
             <StyledDetails onClick={() => goToDetailsPage(navigate, props.name)}>
                 Detalhes
             </StyledDetails>
-            <PokemonImage src={props.photo && props.photo} />
+            <PokemonImage alt='pokemon official artwork' src={props.photo && props.photo} />
 
             <StyledButton onClick={() => props.deletePokemon(props.id)}>Excluir!</StyledButton>
 
