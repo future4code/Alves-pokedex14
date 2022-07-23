@@ -11,6 +11,11 @@ justify-content: center;
 @media (max-width: 880px){
     display: flex;
 }
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+grid-template-columns:  5px 1fr 1fr;
+display: grid;
+width: 100%;
+}
 `
 
 export const StyledButton = styled.button`

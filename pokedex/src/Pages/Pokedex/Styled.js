@@ -10,6 +10,11 @@ color: #FFFFFF;
 margin-top: 60px;
 margin-left: 40px;
 margin-bottom: 2px;
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* celulares */
+font-size: 30px;
+margin-left: 5px;
+}
 `
 export const DisplayCards = styled.div`
 display: grid;
