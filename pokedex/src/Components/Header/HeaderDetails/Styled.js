@@ -8,6 +8,12 @@ align-items: center;
 min-height: 12vh;
 width: 100vw;
 justify-content: center;
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* celulares */
+display: grid;
+grid-template-columns: 1fr 1fr 5px;
+width: 100%;
+}
 `
 
 export const StyledGoBack = styled.button`
@@ -31,6 +37,10 @@ color: #1A1A1A;
 
 export const StyledImg = styled.img`
 margin: 0 auto;
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* celulares */
+width: 250px;
+}
 
 `
 
