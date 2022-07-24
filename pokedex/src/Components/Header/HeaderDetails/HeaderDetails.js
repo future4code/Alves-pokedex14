@@ -10,10 +10,6 @@ export default function HeaderPokedex(props) {
   const navigate = useNavigate();
   let cachePokedex = JSON.parse(localStorage.getItem('pokedex cache'));
 
-  const pokedexMap = cachePokedex.map((pokemon, index) => {
-    return pokemon.nome 
-  })
-
   const renderButton = () => {
     if (window.location.pathname.includes("/pokedex/detail")) {
       return <StyledButton onClick={()=>deletePokemon(props.id)}>Excluir da Pokedex</StyledButton>
@@ -26,7 +22,7 @@ export default function HeaderPokedex(props) {
       `You really want to remove ${props.name} from your pokedex?`
   )
   if (confirmBox === true) {
-    const novaLista = cachePokedex.filter((pokemon) => {
+    const novaLista = cachePokedex?.filter((pokemon) => {
       return pokemon.id !== id
     })
     states.setPokedex(novaLista)
