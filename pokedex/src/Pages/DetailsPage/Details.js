@@ -26,7 +26,7 @@ export default function Details() {
   return (
     <div>
       <HeaderDetails name={states.pokemonPage.name} id={states.pokemonPage.id}/>
-      <StyledH2>Details</StyledH2>
+      <StyledH2>Detalhes</StyledH2>
       <DisplayCards>
 
         <ContainerCardDetails type={type}>
@@ -103,7 +103,7 @@ export default function Details() {
             
               <StatsNumber>
               {stats && stats.map((item,indice) => {
-                return <StatsNumber> {item.base_stat} </StatsNumber> 
+                return <StatsNumber key={indice}> {item.base_stat} </StatsNumber> 
               })}     
               </StatsNumber>
 

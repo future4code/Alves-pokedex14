@@ -30,6 +30,11 @@ background-repeat: no-repeat;
 background-position-x: 200px;
 background-position-y: -10px;
 background-size: 235.73px 245.73px;
+@media (max-width: 574px){
+    margin-right: 20px;
+    min-width: 15.625rem;
+    margin-right: 120px;
+}
 `   
 
 export const StyledPokemonNumber = styled.h4`
@@ -177,6 +182,11 @@ width: 193px;
 height: 193px;
 bottom: 245px;
 left: 217px;
+@media (max-width: 574px){
+    width: 143px;
+height: 143px;
+left: 130px;
+}
 `
 
 export const StyledButton = styled.button`
@@ -203,4 +213,8 @@ font-size: 16px;
 line-height: 24px;
 color: #FFFFFF;
 cursor: pointer;
+@media (max-width: 574px){
+    bottom: 187px;
+left: 130px;
+}
 `

@@ -11,7 +11,6 @@ justify-content: center;
 @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
 /* celulares */
 display: grid;
-grid-template-columns:  1fr 1fr;
 width: 100%;
 }
 `
@@ -26,6 +25,9 @@ font-style: normal;
 font-weight: 700;
 font-size: 24px;
 line-height: 36px;
+@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+font-size: 18px;
+}
 cursor: pointer;
 
 /* identical to box height */
@@ -37,9 +39,7 @@ color: #1A1A1A;
 
 export const StyledImg = styled.img`
 margin: 0 auto;
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* celulares */
-width: 250px;
+@media (max-width: 517px){
+    height: 11vh;
 }
-
 `
