@@ -22,7 +22,7 @@ export default function HeaderPokedex(props) {
       `You really want to remove ${props.name} from your pokedex?`
   )
   if (confirmBox === true) {
-    const novaLista = cachePokedex?.filter((pokemon) => {
+    const novaLista = cachePokedex && cachePokedex.filter((pokemon) => {
       return pokemon.id !== id
     })
     states.setPokedex(novaLista)
