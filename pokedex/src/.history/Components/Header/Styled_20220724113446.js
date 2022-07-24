@@ -32,9 +32,6 @@ line-height: 36px;
 color: #FFFFFF;
 border: none;
 cursor: pointer;
-:hover{
-    background: #74bbef;
-}
 @media (max-width: 517px){
     height: 54px;
     min-width: 13vw;
