@@ -8,12 +8,6 @@ align-items: center;
 min-height: 12vh;
 width: 100vw;
 justify-content: center;
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* celulares */
-display: grid;
-grid-template-columns: 1fr 1fr 5px;
-width: 100%;
-}
 `
 
 export const StyledGoBack = styled.button`
@@ -33,13 +27,16 @@ text-decoration-line: underline;
 border: none;
 background-color: white;
 color: #1A1A1A;
+@media (max-width: 517px){
+    font-size: 16px;
+    line-height: 20px;
+}
 `
 
 export const StyledImg = styled.img`
 margin: 0 auto;
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* celulares */
-width: 250px;
+@media (max-width: 517px){
+    height: 8vh;
 }
 
 `
@@ -65,6 +62,9 @@ cursor: pointer;
 /* identical to box height */
 border: none;
 color: #FFFFFF;
-
+@media (max-width: 517px){
+    font-size: 14px;
+    width: 90px;
+}
 
 `

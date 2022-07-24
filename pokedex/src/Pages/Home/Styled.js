@@ -13,8 +13,10 @@ margin-bottom: 2px;
 @media (max-width: 970px){
     text-align: center;
 }
-@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media screen and (min-device-width : 320px) and (max-device-width : 520px) {
 font-size: 35px;
+margin-right: 220px;
+line-height: 40px;
 }
 `
 
@@ -39,6 +41,8 @@ gap: 40px;
 @media (max-width: 574px){
     display: flex;
     flex-direction: column;
+    margin-right: 100px;
+    margin-left: 40px;
 }
 `
 
@@ -53,6 +57,9 @@ margin-top: 60px;
 margin-left: 40px;
 margin-bottom: 2px;
 text-align: center;
+@media (max-width: 574px){
+    text-align: start;
+}
 `
 
 export const Pagination = styled.div`
@@ -61,6 +68,11 @@ flex-direction: row;
 justify-content: center;
 gap: 2px;
 margin-bottom: 3vh;
+@media (max-width: 574px){
+    padding: 8px 7px;
+font-size: 20px;
+justify-content: flex-start;
+}
 `
 
 export const PageNumber = styled.a`
@@ -73,6 +85,9 @@ text-decoration: none;
 transition: background-color .3s;
 border: 1px solid #ddd;
 border-radius: 5px;
+@media (max-width: 574px){
+    padding: 8px 6.9px;
+}
 cursor: pointer;
 :active{
     background-color: red;

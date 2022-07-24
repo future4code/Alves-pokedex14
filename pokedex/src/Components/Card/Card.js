@@ -157,7 +157,7 @@ export default function Card(props) {
       states.setPokedex(novaListaCapturados)
       localStorage.setItem('pokedex cache', JSON.stringify(novaListaCapturados))
       alert("Pokemon Capturado!")
-    }
+    } 
     else {
       const novoPokemon = { nome, id, tipo0, tipo1, foto }
       const novaListaCapturados = [...states.pokedex, novoPokemon]

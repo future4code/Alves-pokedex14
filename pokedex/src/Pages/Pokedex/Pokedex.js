@@ -44,8 +44,6 @@ export default function Pokedex() {
     cachePokedex = novaLista;
   }
   }
-
-  console.log(states.pokedex)
   
   return (
     <div>
@@ -54,6 +52,7 @@ export default function Pokedex() {
       <DisplayCards>
       {cachePokedex && cachePokedex.map((pokemon) => {
         return <CardPokedex 
+        key={pokemon.id}
         name={pokemon.nome}
         id={pokemon.id}
         tipo0={pokemon.tipo0}

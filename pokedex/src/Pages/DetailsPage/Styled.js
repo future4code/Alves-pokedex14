@@ -24,6 +24,9 @@ margin-top: 54px;
 margin-left: 30px;
 margin-right: 30px;
 gap: 40px;
+@media (max-width: 574px){
+   margin-left: 10px;
+}
 `
 
 export const ContainerCardDetails = styled.div`
@@ -58,6 +61,9 @@ background-repeat: no-repeat;
 background-position-x: 143px;
 background-position-y: 5px;
 background-size: 260px 260px;
+@media (max-width: 574px){
+    width: 310px;
+}
 `
 
 export const StyledTop = styled.div`
@@ -117,6 +123,9 @@ z-index: 1;
 /* White */
 background: #FFFFFF;
 border-radius: 8px;
+@media (max-width: 574px){
+    width: 310px;
+}
 `
 
 export const DivTypes = styled.div`
