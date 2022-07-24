@@ -1,4 +1,4 @@
-### POKEDEX
+# POKEDEX
 
 ![Logo](https://user-images.githubusercontent.com/103120880/180627255-13f3e484-65cb-4af0-9a95-4902c96c72cd.svg)
 
@@ -9,7 +9,7 @@
 - Pagina detalhes reconhece quando o Pokemon está ou não na Pokedex
 - Responsividade para Iphone 6/7/8
 
-## O que não funciona: 
+### O que não funciona: 
 
 - Limite de pokemons na pokedex 
 
@@ -22,6 +22,6 @@
 - Douglas Henrique Ferreira Barbosa
 - Wesliane Silva Vieira
 
-### Link do Surge: 
+# Link do Surge: 
 
 https://succinct-cellar.surge.sh
