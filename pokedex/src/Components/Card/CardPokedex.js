@@ -20,7 +20,7 @@ import Rock from '../../Assets/Rock.svg'
 import Steel from '../../Assets/Steel.svg'
 import { useContext, useState } from 'react'
 import GlobalStateContext from '../../Global/GlobalStateContext'
-import { goToDetailsPage, goToDetailsPokedexPage } from '../../Routes/Coordinator'
+import { goToDetailsPokedexPage } from '../../Routes/Coordinator'
 import { useNavigate, useParams } from 'react-router-dom'
 
 export default function CardPokedex(props) {

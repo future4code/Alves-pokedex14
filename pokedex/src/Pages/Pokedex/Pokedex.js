@@ -6,7 +6,7 @@ import CardPokedex from '../../Components/Card/CardPokedex'
 
 
 export default function Pokedex() {
-  const { states, constants } = useContext(GlobalStateContext)
+  const { states } = useContext(GlobalStateContext)
 
 
   const pokedexList= {}

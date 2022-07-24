@@ -6,17 +6,10 @@ import { useNavigate } from 'react-router-dom';
 import GlobalStateContext from '../../../Global/GlobalStateContext';
 
 export default function HeaderPokedex(props) {
-  const { states, constants } = useContext(GlobalStateContext)
+  const { states } = useContext(GlobalStateContext)
   const navigate = useNavigate();
   let cachePokedex = JSON.parse(localStorage.getItem('pokedex cache'));
-
-  const renderButton = () => {
-    if (window.location.pathname.includes("/pokedex/detail")) {
-      return <StyledButton onClick={()=>deletePokemon(props.id)}>Excluir da Pokedex</StyledButton>
-    }
-  }
   
-
   const deletePokemon = (id) => {
     const confirmBox = window.confirm(
       `You really want to remove ${props.name} from your pokedex?`
@@ -31,6 +24,13 @@ export default function HeaderPokedex(props) {
     alert("Pokemon excluido da Pokedex com sucesso!")
   }
   }
+
+  const renderButton = () => {
+    if (window.location.pathname.includes("/pokedex/detail")) {
+      return <StyledButton onClick={()=>deletePokemon(props.id)}>Excluir da Pokedex</StyledButton>
+    }
+  }
+  
 
   return (
     <ContainerHeader>

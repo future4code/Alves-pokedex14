@@ -181,6 +181,11 @@ width: 193px;
 height: 193px;
 bottom: 245px;
 left: 217px;
+transition-duration: 0.5s;
+:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
 @media (max-width: 574px){
     width: 143px;
 height: 143px;
@@ -194,17 +199,14 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 4px 10px;
-
 position: relative;
 bottom: 225px;
 left: 250px;
 width: 136px;
 height: 34px;
 border: none;
-
 background: #FFFFFF;
 border-radius: 8px;
-
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
@@ -212,6 +214,9 @@ font-size: 16px;
 line-height: 24px;
 color: #0F0F0F;
 cursor: pointer;
+:hover{
+    background: #EDF1EC;
+}
 @media (max-width: 574px){
     bottom: 187px;
 left: 130px;
