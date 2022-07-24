@@ -22,16 +22,14 @@ import { useContext, useEffect, useState } from 'react'
 import GlobalStateContext from '../../Global/GlobalStateContext'
 import axios from 'axios'
 import { goToDetailsPage } from '../../Routes/Coordinator'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Card(props) {
   const [pokemonDetail, setPokemonDetail] = useState({})
-  const { states, constants } = useContext(GlobalStateContext)
+  const { states } = useContext(GlobalStateContext)
   const [pokemonType, setPokemonType] = useState([])
 
   //
-
-  const params = useParams();
   const navigate = useNavigate();
 
   //

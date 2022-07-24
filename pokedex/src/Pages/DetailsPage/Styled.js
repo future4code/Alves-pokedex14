@@ -106,6 +106,11 @@ position: relative;
 left: 75px;
 top: 50px;
 z-index: 2;
+transition-duration: 0.5s;
+:hover {
+  transform: scale(1.07);
+  transition-duration: 0.5s;
+}
 `
 
 export const DivDetails = styled.div`

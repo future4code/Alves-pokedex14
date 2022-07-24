@@ -32,6 +32,10 @@ line-height: 36px;
 color: #FFFFFF;
 border: none;
 cursor: pointer;
+@media (max-width: 517px){
+    height: 54px;
+    min-width: 13vw;
+}
 `
 
 export const StyledImg = styled.img`

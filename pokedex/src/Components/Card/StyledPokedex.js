@@ -22,7 +22,7 @@ background: ${props => props.tipo0 === "dragon" && "#004170;" };
 background: ${props => props.tipo0 === "steel" && "#B7B9D0" };
 background: ${props => props.tipo0 === "dark" && "#55433c" };
 background: ${props => props.tipo0 === "flying" && "#A891EC" };
-
+box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 border-radius: 12px;
 padding: 25px 23px 20px 23px;
 background-image: url(${BackgroundCard});
@@ -182,6 +182,11 @@ width: 193px;
 height: 193px;
 bottom: 245px;
 left: 217px;
+transition-duration: 0.5s;
+:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
 @media (max-width: 574px){
     width: 143px;
 height: 143px;
@@ -213,6 +218,9 @@ font-size: 16px;
 line-height: 24px;
 color: #FFFFFF;
 cursor: pointer;
+:hover{
+    background: #fe4646;
+}
 @media (max-width: 574px){
     bottom: 187px;
 left: 130px;

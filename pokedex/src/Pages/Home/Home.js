@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { goToHomeBack, goToHomeNext } from '../../Routes/Coordinator'
 
+
 export default function Home() {
   const { states, constants } = useContext(GlobalStateContext)
   const params = useParams();
