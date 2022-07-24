@@ -59,7 +59,7 @@ font-size: 16px;
 line-height: 24px;
 cursor: pointer;
 :hover{
-    background: #e87979;
+    background: #FFFFFF;
 }
 
 /* identical to box height */

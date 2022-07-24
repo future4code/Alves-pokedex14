@@ -33,7 +33,7 @@ color: #FFFFFF;
 border: none;
 cursor: pointer;
 :hover{
-    background: #74bbef;
+    background: #FFFFFF;
 }
 @media (max-width: 517px){
     height: 54px;
