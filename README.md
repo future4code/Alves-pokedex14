@@ -9,10 +9,6 @@
 - Pagina detalhes reconhece quando o Pokemon está ou não na Pokedex
 - Responsividade para Iphone 6/7/8
 
-### O que não funciona: 
-
-- Limite de pokemons na pokedex 
-
 ### Linguagens utilizadas
 
 - React, Styled components, React Router Dom, HTML, CSS, Figma.
