@@ -9,7 +9,7 @@ const GlobalState = (props) => {
     const [pokemonPage, setPokemonPage] = useState([])
     const [pokemonTypes, setPokemonTypes] = useState([])
 
-    // pegar lista
+    //
 
     const getPokemons = (pageValue) => {
         axios
@@ -18,8 +18,7 @@ const GlobalState = (props) => {
         .catch((err) => alert(err.response))
     }
 
-
-    // pegar info cards
+    //
 
     const getDetails = () => {
         axios
@@ -29,11 +28,11 @@ const GlobalState = (props) => {
             console.log(res.data)
           })
           .catch((err) => {
-    
+            alert(err.response)
           })
       }
 
-    // get detailsPage
+    // 
 
     const getDetailsPage = (name) => {
       axios
@@ -43,7 +42,7 @@ const GlobalState = (props) => {
        setPokemonTypes(res.data.types)
       })
       .catch((err) => {
-        console.log(err)
+        alert(err.response)
       })
     }
     

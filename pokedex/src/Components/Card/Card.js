@@ -28,8 +28,6 @@ export default function Card(props) {
   const [pokemonDetail, setPokemonDetail] = useState({})
   const { states } = useContext(GlobalStateContext)
   const [pokemonType, setPokemonType] = useState([])
-
-  //
   const navigate = useNavigate();
 
   //
@@ -50,7 +48,7 @@ export default function Card(props) {
     getDetails()
   }, [props.url])
 
-  // mapping pokemon types
+  // 
 
   useEffect(() => {
 
@@ -61,7 +59,8 @@ export default function Card(props) {
   pokemonType.forEach((element, index) => {
     type['tipo' + index] = element.type.name
   })
-  // Type icons rendering logic
+ 
+  // 
 
   const changeType0MiniImage = () => {
     if (type.tipo0 === 'grass') {
@@ -143,7 +142,7 @@ export default function Card(props) {
     }
   }
 
-  // add to pokedex
+  // 
 
   let listPokedexCache = JSON.parse(localStorage.getItem('pokedex cache'));
 
