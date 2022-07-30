@@ -13,11 +13,11 @@ https://scattered-birds.surge.sh/
 ### O que funciona:
 
 - Cards respondem de acordo com o Pokemon e tipos.
-- Adicionar Pokemons até Pokedex 
-- Pagina detalhes reconhece quando o Pokemon está ou não na Pokedex
-- Responsividade para Iphone 6/7/8
+- Capturar Pokemons até Pokedex 
+- Paginação
+- Responsividade para Iphone 6/7/8 e outros mobiles.
 
-### Linguagens utilizadas
+### Tecnologias utilizadas
 
 - React, Styled components, React Router Dom, HTML, CSS, Figma.
 
@@ -29,5 +29,10 @@ https://scattered-birds.surge.sh/
 ### O que aprendi
 
 Douglas: - Apartir desse projeto passei a me sentir mais confortavel com manipulações de array, reforcei bastante o uso de renderização condicional usando props pelo styled components e ganhei mais experiencia com uma API mais inflada!
+
+### Imagens
+
+![image](https://user-images.githubusercontent.com/103120880/181880330-8fdc405b-8a87-43d2-99f7-96adf57b5625.png)
+![image](https://user-images.githubusercontent.com/103120880/181880342-2e0f2845-8c81-4c22-87a0-78f4fc762623.png)
 
 
